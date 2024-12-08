@@ -9,3 +9,8 @@ def index(request):
         'nationality' : 'Britain'
     }
     return render(request,'index.html',context)
+
+def counter(request):
+    text = request.GET['text']
+    amt_of_words = len(text.split())
+    return render(request,'counter.html',{'amount':amt_of_words})
