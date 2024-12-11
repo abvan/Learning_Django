@@ -1,4 +1,4 @@
-{% load static%}
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
 
-<link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" >
-<h1>Hey, Welcome to my Project </h1>
+<h1>Hey, Welcome to my project {{feature.id}} We are {{feature.name}} and {{feature.details}}</h1>
