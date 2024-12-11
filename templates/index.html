@@ -11,7 +11,7 @@
 {% endfor %}
 
 {% if user.is_authenticated %}
-<button type="submit" href='logout' name="logout">logout</button>
+<a type="submit" href='logout' name="logout">logout</button>
 {% else %}
-<button type="submit" href='login' name="login">Sign Up</button>
+<a type="submit" href='login' name="login">Sign Up</button>
 {% endif %}
