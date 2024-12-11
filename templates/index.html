@@ -1,4 +1,8 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'style.css' %}">
 
+{% for feature in features %}
+
 <h1>Hey, Welcome to my project {{feature.id}} We are {{feature.name}} and {{feature.details}}</h1>
+
+{% endfor %}
