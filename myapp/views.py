@@ -7,6 +7,11 @@ from .models import Feature
 # Create your views here.
 def index(request):
     features = Feature.objects.all
+    
+    print(request.POST.get("login"))
+    
+    # if request.method == 'POST' :
+    #     return redirect(logout)
     return render(request,'index.html',{'features':features})
 
 def counter(request):
@@ -57,3 +62,7 @@ def login(request):
         return render(request,'login.html')
 
     return render(request,'login.html')
+
+def logout(request):
+    auth.logout(request)
+    return redirect('')

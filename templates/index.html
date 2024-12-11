@@ -1,10 +1,17 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'style.css' %}">
-{%if user.is_authenticated %}
+{% if user.is_authenticated %}
 <h1>Welcome to our Home {{user.username}}</h1>
 {% else %}
 <h1>Welcome Everyone</h1>
-{%endif%}
+{% endif %}
+
 {% for feature in features %}
 <h3>Hey, Welcome to my project {{feature.id}} We are {{feature.name}} and {{feature.details}}</h3>
 {% endfor %}
+
+{% if user.is_authenticated %}
+<button type="submit" href='logout' name="logout">logout</button>
+{% else %}
+<button type="submit" href='login' name="login">Sign Up</button>
+{% endif %}
